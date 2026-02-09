@@ -1,4 +1,4 @@
-![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)
 ![Gemini](https://img.shields.io/badge/Gemini-AI-blue)
 
