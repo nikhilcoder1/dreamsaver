@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 70% 5%;
+    --foreground: 240 10% 95%;
+    --card: 260 45% 10%;
+    --card-foreground: 240 10% 95%;
+    --popover: 260 45% 10%;
+    --popover-foreground: 240 10% 95%;
+    --primary: 271 76% 53%;
+    --primary-foreground: 240 10% 95%;
+    --secondary: 248 39% 39%;
+    --secondary-foreground: 240 10% 95%;
+    --muted: 260 30% 20%;
+    --muted-foreground: 240 5% 70%;
+    --accent: 271 76% 53%;
+    --accent-foreground: 240 10% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 240 10% 95%;
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 271 76% 53%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom gradient backgrounds */
+.gradient-dreamy {
+  background: radial-gradient(ellipse at top, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom, rgba(72, 61, 139, 0.15) 0%, transparent 50%),
+              #0A051A;
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(72, 61, 139, 0.05) 100%);
+}
+
+/* Glow effects */
+.glow-violet {
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.glow-violet-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-violet-hover:hover {
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+/* Loading animation */
+@keyframes pulse-wave {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-wave {
+  animation: pulse-wave 2s ease-in-out infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(27, 20, 49, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 43, 226, 0.1);
+}
